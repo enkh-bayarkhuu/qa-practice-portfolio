@@ -18,6 +18,7 @@ I'm building this portfolio to develop practical QA skills, gain experience with
 ## Tools & Platforms
 
 - **DemoQA:** Practising manual testing.
+- **Postman** Practising API testing by sending requests and checking response status codes and data.
 - **Notion:** Organizing test cases, tracking test results, documenting bugs, and keeping learning notes.
 - **GitHub:** Organizing and sharing my testing portfolio.
 

@@ -15,13 +15,19 @@ I'm building this portfolio to develop practical QA skills, gain experience with
 - Record test results and compare actual behavior with expected results.
 - Explore tools and techniques used in software quality assurance.
 
+## Portfolio Sections
+
+- **API Testing:** Test cases and results using Postman and JSONPlaceholder.
+- **DemoQA:** Manual testing practice, including test cases and bug reports.
+- **Exploratory Testing:** Issues and unexpected behavior found while using real-world apps, websites, and devices.
+
 ## Tools & Platforms
 
-- **DemoQA:** Practising manual testing.
-- **Postman** Practising API testing by sending requests and checking response status codes and data.
+- **DemoQA:** Practising manual testing using a demo website.
+- **Postman:** Practising API testing by sending requests and checking response status codes and data.
 - **Notion:** Organizing test cases, tracking test results, documenting bugs, and keeping learning notes.
 - **GitHub:** Organizing and sharing my testing portfolio.
 
 ## Progress
 
-This project is a work in progress.
+This project is a work in progress. I'll continue adding test cases, bug reports, and testing observations as I learn.

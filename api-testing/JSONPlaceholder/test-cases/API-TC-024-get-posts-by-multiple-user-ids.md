@@ -5,7 +5,11 @@
 - **Endpoint:** https://jsonplaceholder.typicode.com/posts?userId=1&userId=2
 - **Method:** GET
 - **Tool:** Postman
-
+  
+## Preconditions
+- User ID `1` exists and has associated posts.
+- User ID `2` exists and has associated posts.
+  
 ## Steps to Execute
 1. Open Postman and create a new request.
 2. Select the GET method.

@@ -1,3 +1,4 @@
+
 import { test, expect } from '@playwright/test';
 
 test('Verify Text Box form submission', async ({ page }) => {
@@ -15,8 +16,6 @@ test('Verify Text Box form submission', async ({ page }) => {
   await page.getByPlaceholder('Current Address').fill('12 3 Ave NW');
   await expect(page.getByPlaceholder('Current Address')).toHaveValue('12 3 Ave NW');
 
-  // await page.getByPlaceholder('Permanent Address').fill('456 78 Ave SW');
-  //await expect(page.getByPlaceholder('Permanent Address').toHaveValue('456 78 Ave SW'));
   await page.locator('#permanentAddress').fill('456 78 Ave SW');
   await expect(page.locator('#permanentAddress')).toHaveValue('456 78 Ave SW');
 
@@ -28,5 +27,17 @@ test('Verify Text Box form submission', async ({ page }) => {
   await expect(page.locator('#email')).toHaveText('Email:adam12@yahoo.com');
   await expect(page.getByText('Current Address :12 3 Ave NW')).toBeVisible();
   await expect(page.getByText('Permananet Address :456 78 Ave SW')).toBeVisible();
+
+});
+
+test('Verify Text Box form submission with empty fields', async ({ page }) => {
+
+  await page.goto('https://demoqa.com/text-box');
+
+  // submit without entering any information
+  await page.getByRole('button', { name: 'Submit' }).click();
+
+  // verify that no output is displayed
+  await expect(page.locator('#output')).not.toBeVisible();
 
 });

@@ -41,3 +41,18 @@ test('Verify Text Box form submission with empty fields', async ({ page }) => {
   await expect(page.locator('#output')).not.toBeVisible();
 
 });
+
+test('Verify email format', async({page}) =>{
+  await page.goto('https://demoqa.com/text-box');
+
+  // fill in the name and an invalid email address
+  await page.getByPlaceholder('Full Name').fill('Adam Smith');
+  await page.getByPlaceholder("name@example.com").fill('adam123@yahoo');
+  
+  // submit the form
+  await page.getByRole('button', {name: 'Submit'}).click();
+
+  // verify that the email field displays an error
+  await expect(page.locator('#userEmail')).toHaveClass(/field-error/);
+
+});

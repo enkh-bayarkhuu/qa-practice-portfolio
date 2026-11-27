@@ -56,3 +56,15 @@ test('Verify email format', async({page}) =>{
   await expect(page.locator('#userEmail')).toHaveClass(/field-error/);
 
 });
+
+
+test('Verify Full Name rejects whitespace-only input', async({page}) =>{
+  await page.goto('https://demoqa.com/text-box');
+  
+  await page.getByPlaceholder('Full Name').fill(' ');
+  await page.getByRole('button', {name: Submit}).click();
+
+  // verify that empty name output is not displayed
+  await expect(page.locator('#name')).not.toBeVisible();
+
+});
